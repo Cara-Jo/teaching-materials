@@ -1,0 +1,23 @@
+[role="transition-blue"]
+== Collaborating
+
+== Collaborating with Zeplin
+
+image::{image_path}/zeplin.png[width="80%"]
+
+== Collaborating with Zeplin
+
+There is no easy way to collaborate with a developer if they don't have Sketch installed.
+
+Instead of making them download a $99 program, using Zeplin will allow you to send over design assets, colors, font sizes, etc. to your developer. 
+
+Using the built in comments feature allows you to leave notes on functionality.
+
+
+
+== Using Zeplin
+
+1. Sign up for an account at http://zelplin.io[zeplin.io] and download the mac app
+2. Download the https://zeplin.io/support.html#plugin[Sketch plugin]
+3. Export your artboard to Zeplin
+4. Optional: Create assets using the 'Single Layers' export. They will automatically show up in Zeplin. 

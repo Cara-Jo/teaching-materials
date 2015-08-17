@@ -1,0 +1,19 @@
+[role="transition-blue"]
+== Tools & Resources
+
+== Tools & Resources 
+* http://www.sketchappsources.com/[Sketch App Resources]: List of free sketch templates/icons/kits to download and use with Sketch
+* https://zeplin.io/[Zeplin.io]: Collaboration Tool
+* https://github.com/sketchplugins/plugin-directory[Sketch Plugins Listed on GitHub]: Large list of plugins with links to their GitHub Repositories 
+
+== UI Kits
+
+* http://www.invisionapp.com/do[DO]: A to-do app that has 130+ screens pre-designed for you.
+* http://www.invisionapp.com/tethr[Tethr]: A set of screens to create different types of apps.
+* http://www.teehanlax.com/tools/iphone-sketch-app/[iOS 8 GUI]: Sketch file with all the GUI elements found in the public release of iOS 8.
+
+== Fonts & Icons
+
+* http://www.dafont.com/[dafont]: Huge collection of free fonts for you to use in your project
+* http://www.entypo.com/[Entypo icon set]: Collection of vector icons to use in your project. The .EPS file imports easily into Sketch
+* https://thenounproject.com/[Noun Project]: Massive collection of icons to represent almost anything.

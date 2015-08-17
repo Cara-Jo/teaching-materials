@@ -1,0 +1,40 @@
+[role="transition-blue"]
+== Vectors
+
+== What is a Vector?
+A Vector is a mathematical description of a geometric shape. This includes the thickness of the line, fill color and other attributes that can be expressed mathematically.
+
+== Why are Vectors awesome?
+
+They are infinitively scalable and do not degrade as you increase or decrease their size. 
+
+They also can be used as a SVG (Scalable Vector Graphic) on the web to allow users to see high quality graphics.
+
+_They are not to be used for images like photographs._
+
+
+== Tools to create vectors with
+
+* *Line Tool:* used to draw lines in your documents
+* *Arrow Tool:* used like the line tool, but will have an arrow applied to the end point
+* *Rectangle Tool:* is used frequently and can be accessed by pressing the `R` key
+* *Oval Tool:* behaves the same way as the Rectangle Tool and can be accessed by pressing the `O` key
+* *Pen (Vector) Tool:* allows you to create vector shapes from scratch, point-by-point and can be accessed by pressing the `V` key
+
+_All new shapes you create with Sketch are Vectors by default._
+
+== Modify the shape of shapes 
+1. Double click on the shape and you will see a new set of points appear
+2. You will notice your cursor has changed to the pen tool
+3. Try dragging these points around to see how they modify your shape
+4. Add points by clicking on the edge of the shape where you would like to add one. You will notice the cursor changes to the pen with a `+` next to it.
+5. Remove points by clicking on the point you would like to remove and then hitting the `delete` key
+
+== Modify the points' curve
+* Clicking on a point gives us new options in the inspector
+
+1. *Mirrored:* Default point type. The two curve handles are an equal distance from the point.
+2. *Asymmetric:* Both handles will move as you adjust the angle. But you can now make the distance of the handles from the points independent to each other.
+3. *Disconnected:* Allows you to adjust them independently. 
+4. *Straight*: Removes all curves from the point.
+

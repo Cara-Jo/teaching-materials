@@ -10,7 +10,7 @@ The Inspector is where all the layer properties are defined.
 * Shadows & blur
 
 == Changing the Color
-1. Select a layer to change it's properites
+1. Select a layer to change it's properties
 2. Click on the color icon under the fill section
 
 * Select either a flat color, gradient or texture
@@ -27,8 +27,21 @@ The Inspector is where all the layer properties are defined.
 
 == Add Shadows
 
-* Add a drop shaddow by clicking the `+` icon 
+* Add a drop shadow by clicking the `+` icon 
 * Adjust the color, blur, spread, angle, and opacity of the shadow
 * Create an inner shadow by doing the same as above, but in the *inner shadow* section
 
 You can have multiple types of shadows on a shape!
+
+== Styling Text
+
+* To style text - many of the same things apply, except of course gradients
+** Fill, Border
+** Shadows, Blur
+
+* Text only things are also available:
+** Font Size, family, size
+** Text Color
+** Alignment
+** Underline, strike-through, etc.
+

@@ -4,46 +4,46 @@
 == Interface
 The Sketch UI (User Interface) is comprised of 4 sections
 
-1. The Toolbar
+1. The Tool-bar
 2. Layers Panel
 3. Inspector
-4. An infinate canvas
+4. An infinite canvas
 
 == Interface
 image::{image_path}/interface.png[]
 
-== Toolbar
+== Tool-bar
 * Contains all the tools to make a design
 * Can be customized by right clicking on it and adding or removing items you don't need. 
 
-== Toolbar » Insert
+== Tool-bar » Insert
 * Anything you select from this menu can be drawn on the canvas
 * Each new shape you draw creates a new layer
 * Building blocks of the design - manipulating and combining these elements will create a design
-* Once you draw a shape - a lot more tools on the toolbar become active
+* Once you draw a shape - a lot more tools on the tool-bar become active
 
 image::{image_path}/insert.png[]
 
-== Toolbar » Group/Ungroup
+== Tool-bar » Group/Ungroup
 * Group & Ungroup are used to keep your document organized
 
 image::{image_path}/group-ungroup.png[]
 
-== Toolbar » Create Symbol
+== Tool-bar » Create Symbol
 * New tool introduced in the latest version of Sketch
 * Allows you to create reusable design elements
 
 image::{image_path}/symbol.png[]
 
-== Toolbar » Zoom
+== Tool-bar » Zoom
 * Zoom in and out of your document
 * Optionally use `command +` or `command -`
 
 image::{image_path}/zoom.png[]
 
-== Toolbar » Edit Controls
+== Tool-bar » Edit Controls
 * *Edit:* allows you to edit the individual points of a vector shape
-* *Transform:* allows you to asymetrically transform or skew a shape
+* *Transform:* allows you to asymmetrically transform or skew a shape
 * *Rotate:* rotate your element 
 * *Flatten:* turn your vector shape into a raster shape
 * *Mask:* clips images and vector shapes
@@ -51,17 +51,17 @@ image::{image_path}/zoom.png[]
 
 image::{image_path}/transform.png[]
 
-== Toolbar » Boolean Operations
+== Tool-bar » Boolean Operations
 * Allows you to combine, or subtract elements of multiple vector shapes to create complex shapes.
 
 image::{image_path}/boolean.png[]
 
-== Toolbar » Forward & backward
+== Tool-bar » Forward & backward
 * Used to rearrange the order of layers.
 
 image::{image_path}/forward-backward.png[]
 
-== Toolbar » Mirror, View, & Export
+== Tool-bar » Mirror, View, & Export
 * *Mirror:* displays your design on a mobile device that has the mirror app installed
 * *View:* turn on guides, grids & rulers
 * *Export:* export your image to a range of file formats

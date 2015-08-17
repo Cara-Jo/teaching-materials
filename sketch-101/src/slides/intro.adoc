@@ -1,6 +1,17 @@
+== About Cojo
+* Designing & Coding for the Internet since 1998
+* Senior Designoper at DataStax
+* Founder of Girl Develop It Boulder/Denver
+* hi@cojorado.com
+* @cojorado 
+
+== Slides
+
+View these slides online at: http://cara-jo.github.io/teaching-materials/[cara-jo.github.io/teaching-materials/]
+
 == What is Sketch?
 
-* Easy to use digital design tool that is relativly new to the design community
+* Easy to use digital design tool that is relatively new to the design community
 * Affordable alternative to the more expensive Adobe design products
 * Vector based tool for visual designers 
 * Makes it easy to turn design files into fully functional sites
@@ -12,7 +23,7 @@
 * Vectors
 * Symbols
 * Exporting
-* Colaborating
+* Collaborating
 * Tools & Resources
 
 == Downloading Sketch

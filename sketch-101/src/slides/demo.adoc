@@ -1,0 +1,13 @@
+[role="transition-blue"]
+== Demo: Login Screen
+
+== Creating a login screen
+
+1. Image background with color overlay
+2. Headline
+3. Text Boxes with labels
+4. Submit button
+5. Link to forgot password form
+
+== Creating a login screen
+image::{image_path}/demo.png[ width="30%"]

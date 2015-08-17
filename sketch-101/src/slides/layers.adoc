@@ -1,8 +1,22 @@
 [role="transition-blue"]
 == Creating & Moving Objects 
 
+== Where Layers Live
+Layers live on the Canvas
+
+To organize your layers you can create Artboards - which are fixed frames in your infinite canvas.
+
+* To create a new Artboard go to `insert > Artboard` or hit the `A` key.
+* Many pre-defined dimensions show up for different device dimensions
+
+To organize your Artboards you can place them on different pages.
+
+* To create a new page click the `+` arrow on the pages panel within your layers panel. 
+
+_You might have to expand this panel by clicking the arrow next to the pages title_
+
 == Creating Layers
-* Add shapes from the toolbar
+* Add shapes from the tool-bar
 * Import images by dragging and dropping them onto the canvas
 * Use the vector tool to draw a custom shape
 * Insert text with the text tool
@@ -18,9 +32,9 @@ Two ways to select layers to manipulate them
 * Selected layers will have a blue outline around to indicate that they are selected
 
 == Resizing Layers
-* When a layer is selecte handles will appear on it's corners
-* Clicking and draging 
-* To keep aspect ratio hold down *shift* while draging
+* When a layer is selected handles will appear on it's corners
+* Clicking and dragging 
+* To keep aspect ratio hold down *shift* while dragging
 
 == Resizing with the Inspector
 The Inspector contains all the information about your shape
@@ -34,13 +48,26 @@ To maintain the aspect ratio click the lock icon.
 == Moving Layers
 * Simply click and drag a layer around the canvas to move it. 
 * Use the arrow keys to move it one pixel at a time.
-** Hold down the *shift* key while using the arrow keys to move the shape in incriments of 10 pixels
+** Hold down the *shift* key while using the arrow keys to move the shape in increments of 10 pixels
 * Use the inspector to move it to a precise location on the canvas.
 
 == Duplicating Layers
-* `command` + `D` to duplicate a layer in it's playce
+* `command` + `D` to duplicate a layer in it's place
 * Right click on the layer and select 'Duplicate'.
 
 
 _Duplicated layers are placed on top of the previous layer, so it won't appear as if anything has changed right away._
+
+== Creating Complex Shapes 
+
+Using the Boolean Operations we can combine multiple shapes together, to create a more complex one
+
+1. Draw two or more shapes on the canvas.
+2. Overlap them slightly
+3. Notice that our Boolean tools are now highlighted - which means we can use them
+
+* *Union:* Clicking this will make the shapes become one 
+* *Subtract:* Removes the top layer from the bottom layer
+* *Intersect:* Removes the fill from the areas that are *NOT* overlapping
+* *Difference:* Removes the fill from the areas that *ARE* overlapping
 

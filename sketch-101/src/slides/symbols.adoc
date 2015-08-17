@@ -1,0 +1,29 @@
+[role="transition-blue"]
+== Symbols & Shared Text Styles
+
+== Symbols
+
+Symbols are a great way to create reusable assets for your design. 
+
+If you find yourself using the same design element over and over again, it might be a good idea to create a symbol! 
+
+== Creating & Modifying a Symbol
+
+1. Once you have created something you'd like to reuse, just click the `create symbol` button on the tool-bar
+2. It will now be available in the `symbol` dropdown menu
+3. When inserted the symbol will have a purple colored icon in the layers window and outline on the canvas. (regular elements are outlined in blue)
+
+_Symbols cannot contain other symbols_
+
+If you want to change an attribute for your symbol, it will automatically be updated for all other symbols. 
+
+== Text Styles
+
+Over time you will notice that you want all your headlines to be the same font, size, and color. It's really easy to do this if you create a shared text style. 
+
+== Creating & Modifying Text Styles
+
+1. Once you have created a block of text you would like to reuse, click the `create new text style` option in the inspector
+2. It will now be available in the text styles drop down so you can apply it to text blocks.
+3. If you want to change the text style, just change any attribute of it and it will change globally for all text that has that style applied to it.
+

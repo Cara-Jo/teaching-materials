@@ -1,0 +1,47 @@
+[role="transition-blue"]
+== Exporting for the Web
+
+== Exporting
+
+Once you're done with your design you'll want to export parts of it for the web.
+
+A few ways to export our elements:
+
+1. *Slices:* Exports all elements contained in the selected area
+2. *Single Layers:* Only exports the selected layer and nothing below or above it
+3. *Entire Artboard:* Exports everything on the selected artboard - great for showing the entire design to someone
+4. *CSS Styles:* Exports the selected element's CSS styles to your clipboard to use in a stylesheet.
+
+== Slices
+
+Access the slice tool by either using the insert menu or hitting the `S` key.
+
+1. Click & drag on your canvas to select the area you would like to export. 
+2. Modify the size or location by clicking and dragging it
+3. Use the inspector to change the file type & transparency of the exported image.
+
+When you're ready - click the `export` icon in the tool-bar
+
+== Single Layers
+To export a single layer or group, make sure that all the elements you'd like to export are in a group.
+
+1. Click on the group or layer you would like to export
+2. In the inspector click the `+` icon under `Make Exportable`
+3. Use the inspector to change the file type & transparency of the exported image.
+
+When you're ready - click the `export` icon in the tool-bar
+
+== Entire Artboard
+1. Click on title of the artboard you would like to export in the layers menu.
+2. In the inspector click the `+` icon under `Export`
+3. Use the inspector to change the file type & transparency of the exported image.
+
+When you're ready - click the `export` icon in the tool-bar
+
+== CSS Styles
+
+1. Select the shape or text layer you would like to export the styles for.
+2. Right click on it and select `Copy CSS Attributes`
+3. Paste them into your text editor
+
+_Make sure you put it inside the curly brackets and give it an ID or a Class or it will not work._
