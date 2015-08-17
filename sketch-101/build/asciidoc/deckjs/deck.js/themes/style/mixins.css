@@ -1,0 +1,16 @@
+.border-box {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.visible {
+  display: block;
+  visibility: visible;
+}
+.helvetica {
+  font-family: 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+  font-weight: 300;
+}

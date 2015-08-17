@@ -1,0 +1,12 @@
+== Sensor Data Use Case
+
+=== Learning Objectives
+
+*The objectives for this leaf are:*
+
+* You will be able to identify examples of sensor applications.
+* You will be able to create a conceptual data model for sensor data.
+* You will be able to examine an application workflow for a sensor application for characteristics.
+* You will be able to create a useful logical data model for sensor data.
+* You will be able to analyze and validate sensor data using a previously created logical data model.
+* You will be able to create a physical data model for sensor data.

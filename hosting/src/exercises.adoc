@@ -1,0 +1,18 @@
+== Exercise {exercise_number}: Create An Entity Hierarchy For Videos
+
+=== In this exercise, you will:
+
+* Create a hierarchy for video entity types
+
+=== *_Steps_*
+
+==== Identify Similarities and Differences
+
+Consider the hierarchy given in the slides:
+
+image:{image_path}/covering.svg[]
+
+. Add *Trailer* into the given hierarchy.
+. Be sure to also add a relationship indicating that a video can have a trailer.
+
+*END OF EXERCISE*

@@ -1,0 +1,13 @@
+= Introduction to Hosting
+Cara Jo Miller 
+:backend: deckjs
+:deckjs_theme: gdi
+:deckjs_transition: fade
+:navigation:
+:status:
+:icons: font
+
+
+:slide_path: slides
+:image_path: images
+include::includes.adoc[]

@@ -1,0 +1,34 @@
+[role="transition-blue"]
+== Layer & Text Styling
+
+== The Inspector!
+
+The Inspector is where all the layer properties are defined. 
+
+* Color fill, gradients, textures
+* Border color, width, style, radius
+* Shadows & blur
+
+== Changing the Color
+1. Select a layer to change it's properites
+2. Click on the color icon under the fill section
+
+* Select either a flat color, gradient or texture
+* Adjust the opacity of the color
+
+=== Get Crazy:
+
+* Click the `+` icon to add another fill type on top of this one 
+
+== Modify the Border
+
+* Change the color of the border in a similar manner to the shape fill
+* Make it dashed or dotted by clicking the cog icon
+
+== Add Shadows
+
+* Add a drop shaddow by clicking the `+` icon 
+* Adjust the color, blur, spread, angle, and opacity of the shadow
+* Create an inner shadow by doing the same as above, but in the *inner shadow* section
+
+You can have multiple types of shadows on a shape!

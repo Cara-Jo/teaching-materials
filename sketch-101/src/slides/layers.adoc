@@ -1,0 +1,46 @@
+[role="transition-blue"]
+== Creating & Moving Objects 
+
+== Creating Layers
+* Add shapes from the toolbar
+* Import images by dragging and dropping them onto the canvas
+* Use the vector tool to draw a custom shape
+* Insert text with the text tool
+
+== Selecting Layers
+Two ways to select layers to manipulate them
+
+1. Select layers in the layer panel by clicking their name
+2. Select layers by clicking on them in the canvas.
+
+
+* Select multiple layers by holding down the *shift key*
+* Selected layers will have a blue outline around to indicate that they are selected
+
+== Resizing Layers
+* When a layer is selecte handles will appear on it's corners
+* Clicking and draging 
+* To keep aspect ratio hold down *shift* while draging
+
+== Resizing with the Inspector
+The Inspector contains all the information about your shape
+
+Height, Width, Position, Rotation, etc.
+
+Change these values and hit *enter* to see how your shape changes.
+
+To maintain the aspect ratio click the lock icon.
+
+== Moving Layers
+* Simply click and drag a layer around the canvas to move it. 
+* Use the arrow keys to move it one pixel at a time.
+** Hold down the *shift* key while using the arrow keys to move the shape in incriments of 10 pixels
+* Use the inspector to move it to a precise location on the canvas.
+
+== Duplicating Layers
+* `command` + `D` to duplicate a layer in it's playce
+* Right click on the layer and select 'Duplicate'.
+
+
+_Duplicated layers are placed on top of the previous layer, so it won't appear as if anything has changed right away._
+

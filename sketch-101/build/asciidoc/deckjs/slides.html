@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="Asciidoctor 1.5.2" name="generator" />
+<title>Introduction to Sketch 3</title>
+<link href="deck.js/themes/style/font.css" rel="stylesheet" />
+<style>
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 1.2em; height: 1.2em; font-size: 0.9em; font-weight: bold; line-height: 1.2; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -0.1em; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.colist table td:first-of-type { padding-right: 0.25em; }
+</style>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{font-weight: normal}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#00}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
+<link href="deck.js/core/deck.core.css" rel="stylesheet" />
+<link href="deck.js/extensions/scale/deck.scale.css" media="screen" rel="stylesheet" />
+<link href="deck.js/extensions/status/deck.status.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/style/cojorado.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/transition/fade.css" media="screen" rel="stylesheet" />
+<link href="deck.js/core/print.css" media="print" rel="stylesheet" />
+<script src="deck.js/modernizr.custom.js"></script>
+</head>
+<body class="article">
+<div class="deck-container">
+<div class="deck-header">
+<div class="flex-element deck-course">
+<p>Introduction to Sketch 3</p>
+</div>
+<div class="flex-element deck-brand">
+<a href="http://girldevelopit.com" target="blank">Girl Develop It</a>
+</div>
+</div>
+<section class="slide" id="title-slide">
+<h1>Introduction to Sketch 3</h1>
+</section>
+<section class="slide" id="what-is-sketch">
+<h2>What is Sketch?</h2>
+<div class="ulist">
+<ul>
+<li>Easy to use digital design tool that is relativly new to the design community</li>
+<li>Affordable alternative to the more expensive Adobe design products</li>
+<li>Vector based tool for visual designers</li>
+<li>Makes it easy to turn design files into fully functional sites</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="what-we-will-be-covering-in-this-workshop">
+<h2>What we will be covering in this workshop</h2>
+<div class="ulist">
+<ul>
+<li>Sketch Interface</li>
+<li>Creating &amp; Moving Shapes</li>
+<li>Layer &amp; Text Styling</li>
+<li>Vectors</li>
+<li>Symbols</li>
+<li>Exporting</li>
+<li>Colaborating</li>
+<li>Tools &amp; Resources</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="downloading-sketch">
+<h2>Downloading Sketch</h2>
+<div class="paragraph"><p><em>Sketch is a Mac OS X only application that requires OS X 10.9 and above.</em></p></div>
+<div class="paragraph"><p>Sketch offers a free 30 day trial on the Bohemian Coding website.</p></div>
+<div class="paragraph"><p>Go to <a href="http://bohemiancoding.com/sketch/">bohemiancoding.com/sketch/</a> and download the free trial</p></div>
+<div class="paragraph"><p>To purchase the full version you can either buy it on this website or through the Apple App Store</p></div>
+</section>
+<section class="slide transition-blue" id="interface">
+<h2>Interface</h2>
+
+</section>
+<section class="slide" id="interface-2">
+<h2>Interface</h2>
+<div class="paragraph"><p>The Sketch UI (User Interface) is comprised of 4 sections</p></div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+The Toolbar
+</li>
+<li>
+Layers Panel
+</li>
+<li>
+Inspector
+</li>
+<li>
+An infinate canvas
+</li>
+</ol>
+</div>
+</section>
+<section class="slide" id="interface-3">
+<h2>Interface</h2>
+<div class="imageblock">
+<div class="content">
+<img alt="interface" src="images/interface.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="toolbar">
+<h2>Toolbar</h2>
+<div class="ulist">
+<ul>
+<li>Contains all the tools to make a design</li>
+<li>Can be customized by right clicking on it and adding or removing items you don&#8217;t need.</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="toolbar-insert">
+<h2>Toolbar » Insert</h2>
+<div class="ulist">
+<ul>
+<li>Anything you select from this menu can be drawn on the canvas</li>
+<li>Each new shape you draw creates a new layer</li>
+<li>Building blocks of the design - manipulating and combining these elements will create a design</li>
+<li>Once you draw a shape - a lot more tools on the toolbar become active</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="insert" src="images/insert.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="toolbar-group-ungroup">
+<h2>Toolbar » Group/Ungroup</h2>
+<div class="ulist">
+<ul>
+<li>Group &amp; Ungroup are used to keep your document organized</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="group ungroup" src="images/group-ungroup.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="toolbar-create-symbol">
+<h2>Toolbar » Create Symbol</h2>
+<div class="ulist">
+<ul>
+<li>New tool introduced in the latest version of Sketch</li>
+<li>Allows you to create reusable design elements</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="symbol" src="images/symbol.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="toolbar-zoom">
+<h2>Toolbar » Zoom</h2>
+<div class="ulist">
+<ul>
+<li>Zoom in and out of your document</li>
+<li>Optionally use <code>command +</code> or <code>command -</code></li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="zoom" src="images/zoom.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="toolbar-edit-controls">
+<h2>Toolbar » Edit Controls</h2>
+<div class="ulist">
+<ul>
+<li><strong>Edit:</strong> allows you to edit the individual points of a vector shape</li>
+<li><strong>Transform:</strong> allows you to asymetrically transform or skew a shape</li>
+<li><strong>Rotate:</strong> rotate your element</li>
+<li><strong>Flatten:</strong> turn your vector shape into a raster shape</li>
+<li><strong>Mask:</strong> clips images and vector shapes</li>
+<li><strong>Scale:</strong> resize elements</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="transform" src="images/transform.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="toolbar-boolean-operations">
+<h2>Toolbar » Boolean Operations</h2>
+<div class="ulist">
+<ul>
+<li>Allows you to combine, or subtract elements of multiple vector shapes to create complex shapes.</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="boolean" src="images/boolean.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="toolbar-forward-backward">
+<h2>Toolbar » Forward &amp; backward</h2>
+<div class="ulist">
+<ul>
+<li>Used to rearrange the order of layers.</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="forward backward" src="images/forward-backward.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="toolbar-mirror-view-export">
+<h2>Toolbar » Mirror, View, &amp; Export</h2>
+<div class="ulist">
+<ul>
+<li><strong>Mirror:</strong> displays your design on a mobile device that has the mirror app installed</li>
+<li><strong>View:</strong> turn on guides, grids &amp; rulers</li>
+<li><strong>Export:</strong> export your image to a range of file formats</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img alt="mirror view" src="images/mirror-view.png" />
+</div>
+</div>
+</section>
+<section class="slide transition-blue" id="creating-moving-objects">
+<h2>Creating &amp; Moving Objects</h2>
+
+</section>
+<section class="slide" id="creating-layers">
+<h2>Creating Layers</h2>
+<div class="ulist">
+<ul>
+<li>Add shapes from the toolbar</li>
+<li>Import images by dragging and dropping them onto the canvas</li>
+<li>Use the vector tool to draw a custom shape</li>
+<li>Insert text with the text tool</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="selecting-layers">
+<h2>Selecting Layers</h2>
+<div class="paragraph"><p>Two ways to select layers to manipulate them</p></div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+Select layers in the layer panel by clicking their name
+</li>
+<li>
+<p>Select layers by clicking on them in the canvas.</p>
+<div class="ulist">
+<ul>
+<li>Select multiple layers by holding down the <strong>shift key</strong></li>
+<li>Selected layers will have a blue outline around to indicate that they are selected</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section class="slide" id="resizing-layers">
+<h2>Resizing Layers</h2>
+<div class="ulist">
+<ul>
+<li>When a layer is selecte handles will appear on it&#8217;s corners</li>
+<li>Clicking and draging</li>
+<li>To keep aspect ratio hold down <strong>shift</strong> while draging</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="resizing-with-the-inspector">
+<h2>Resizing with the Inspector</h2>
+<div class="paragraph"><p>The Inspector contains all the information about your shape</p></div>
+<div class="paragraph"><p>Height, Width, Position, Rotation, etc.</p></div>
+<div class="paragraph"><p>Change these values and hit <strong>enter</strong> to see how your shape changes.</p></div>
+<div class="paragraph"><p>To maintain the aspect ratio click the lock icon.</p></div>
+</section>
+<section class="slide" id="moving-layers">
+<h2>Moving Layers</h2>
+<div class="ulist">
+<ul>
+<li>Simply click and drag a layer around the canvas to move it.</li>
+<li><p>
+Use the arrow keys to move it one pixel at a time.<div class="ulist">
+<ul>
+<li>Hold down the <strong>shift</strong> key while using the arrow keys to move the shape in incriments of 10 pixels</li>
+</ul>
+</div></p></li>
+<li>Use the inspector to move it to a precise location on the canvas.</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="duplicating-layers">
+<h2>Duplicating Layers</h2>
+<div class="ulist">
+<ul>
+<li><code>command</code> + <code>D</code> to duplicate a layer in it&#8217;s playce</li>
+<li>Right click on the layer and select 'Duplicate'.</li>
+</ul>
+</div>
+<div class="paragraph"><p><em>Duplicated layers are placed on top of the previous layer, so it won&#8217;t appear as if anything has changed right away.</em></p></div>
+</section>
+<section class="slide transition-blue" id="layer-text-styling">
+<h2>Layer &amp; Text Styling</h2>
+
+</section>
+<section class="slide" id="the-inspector">
+<h2>The Inspector!</h2>
+<div class="paragraph"><p>The Inspector is where all the layer properties are defined.</p></div>
+<div class="ulist">
+<ul>
+<li>Color fill, gradients, textures</li>
+<li>Border color, width, style, radius</li>
+<li>Shadows &amp; blur</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="changing-the-color">
+<h2>Changing the Color</h2>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+Select a layer to change it&#8217;s properites
+</li>
+<li>
+<p>Click on the color icon under the fill section</p>
+<div class="ulist">
+<ul>
+<li>Select either a flat color, gradient or texture</li>
+<li>Adjust the opacity of the color</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<section class="slide" id="get-crazy">
+<h2>Get Crazy:</h2>
+<div class="ulist">
+<ul>
+<li>Click the <code>+</code> icon to add another fill type on top of this one</li>
+</ul>
+</div>
+</section>
+</section>
+<section class="slide" id="modify-the-border">
+<h2>Modify the Border</h2>
+<div class="ulist">
+<ul>
+<li>Change the color of the border in a similar manner to the shape fill</li>
+<li>Make it dashed or dotted by clicking the cog icon</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="add-shadows">
+<h2>Add Shadows</h2>
+<div class="ulist">
+<ul>
+<li>Add a drop shaddow by clicking the <code>+</code> icon</li>
+<li>Adjust the color, blur, spread, angle, and opacity of the shadow</li>
+<li>Create an inner shadow by doing the same as above, but in the <strong>inner shadow</strong> section</li>
+</ul>
+</div>
+<div class="paragraph"><p>You can have multiple types of shadows on a shape!</p></div>
+</section>
+<div aria-role="navigation">
+<a class="deck-prev-link" href="#" title="Previous">
+<i class="icon-chevron-with-circle-left"></i>
+</a>
+<a class="deck-next-link" href="#" title="Next">
+<i class="icon-chevron-with-circle-right"></i>
+</a>
+</div>
+<p aria-role="status" class="deck-status">
+<span class="deck-status-current"></span>
+/
+<span class="deck-status-total"></span>
+</p>
+</div>
+<script src="deck.js/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+<script src="deck.js/core/deck.core.js"></script>
+<script src="deck.js/extensions/scale/deck.scale.js"></script>
+<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js/extensions/status/deck.status.js"></script>
+<script src="deck.js/extensions/svg/svg.min.js"></script>
+<script src="http://d3js.org/d3.v2.js"></script>
+<footer>
+<div class="deck-progressbar">
+<span></span>
+</div>
+<div class="flex-element deck-notice">
+<p>
+&hearts; COJORADO
+</p>
+</div>
+<div class="flex-element deck-progress">
+<p>Slide
+<span class="deck-status-current"></span>
+of
+<span class="deck-status-total"></span></p>
+</div>
+</footer>
+<script type="text/javascript">
+  //<![CDATA[
+    (function($, deck, undefined) {
+      $.deck.defaults.keys['previous'] = [8, 33, 37, 39];
+      $.deck.defaults.keys['next'] = [13, 32, 34, 39];
+    
+      $.extend(true, $[deck].defaults, {
+          countNested: false
+      });
+    
+      $.deck('.slide');
+      $.deck('disableScale');
+    })(jQuery, 'deck');
+  //]]>
+</script>
+<script type="text/javascript">
+  //<![CDATA[
+    $(document).bind('deck.change', function(event, from, to) {
+      var width = to / ($.deck('getSlides').length - 1) * 100;
+      $('.deck-progressbar span').css('width', width + '%');
+    });
+  //]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+= Introduction to Sketch 3
+:backend: deckjs
+:deckjs_theme: cojorado
+:deckjs_transition: fade
+:navigation:
+:status:
+:icons: font
+
+
+:slide_path: slides
+:image_path: images
+include::includes.adoc[]
