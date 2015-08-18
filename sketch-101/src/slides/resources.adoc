@@ -5,6 +5,7 @@
 * http://www.sketchappsources.com/[Sketch App Resources]: List of free sketch templates/icons/kits to download and use with Sketch
 * https://zeplin.io/[Zeplin.io]: Collaboration Tool
 * https://github.com/sketchplugins/plugin-directory[Sketch Plugins Listed on GitHub]: Large list of plugins with links to their GitHub Repositories 
+* http://sketchshortcuts.com/[Sketch Keyboard Shortcuts]: A list of keyboard shortcuts used in Sketch
 
 == UI Kits
 
