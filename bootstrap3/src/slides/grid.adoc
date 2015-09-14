@@ -1,0 +1,86 @@
+[role="transition-blue"]
+== The Bootstrap Grid System
+
+== The Grid
+
+image::{image_path}/the-grid.jpg[]
+
+== The Grid
+Bootstrap is based on a 12-column grid, and uses CSS classes to decide the width of each element.
+
+image::{image_path}/12-grid.png[]
+
+== The Grid
+Each element can take up between 1-12 columns worth of space...
+
+image::{image_path}/12-grid-overlay.png[]
+
+== Rules of The Grid
+* Rows must be placed within a `.container` (fixed-width) or `.container-fluid` (full-width) for proper alignment and padding.
+* Use rows (`.row`) to create horizontal groups of columns.
+* Content should be placed within columns, and only columns may be immediate children of rows.
+
+== Example
+[source, html, style="width: 100%"]
+<div class="container">
+    <div class="row">
+        [CONTENT FOR ROW]
+    </div>
+</div>
+
+== Column Classes
+
+image::{image_path}/col-classes.png[]
+
+== In other words...
+
+If you want to have two 50% columns on a mobile phone, you would use `.col-xs-6` nested in a `.row`, and the rows would be consistent on every device...
+
+image::{image_path}/12-grid-2-col.png[]
+
+== Two 50% width columns
+
+[source, html, style="width: 100%"]
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            [COLUMN 1 CONTENT]
+        </div>
+        <div class="col-xs-6">
+            [COLUMN 2 CONTENT]
+        </div>
+    </div>
+</div>
+
+Two 50% columns on a mobile phone
+
+== Four 25% width columns
+
+If you want to have four 25% columns on a desktop, and would like them to break to 100% on a tablet, you would use .col-md-3 nested in a .row.
+
+image::{image_path}/12-grid-4-col.png[]
+
+== Four 25% width columns
+
+[source, html, style="width: 100%"]
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            [COLUMN 1 CONTENT]
+        </div>
+        <div class="col-md-4">
+            [COLUMN 2 CONTENT]
+        </div>
+        <div class="col-md-4">
+            [COLUMN 3 CONTENT]
+        </div>
+        <div class="col-md-4">
+            [COLUMN 4 CONTENT]
+        </div>
+    </div>
+</div>
+
+Four 25% columns on desktop that break to 100% width on a tablet.
+
+
+

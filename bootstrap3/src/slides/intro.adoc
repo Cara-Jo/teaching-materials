@@ -1,0 +1,18 @@
+== About Cojo
+* Designing & Coding for the Internet since 1998
+* Senior Designoper at DataStax
+* Founder of Girl Develop It Boulder/Denver
+* hi@cojorado.com
+* @cojorado 
+
+== Slides
+
+View these slides online at: http://cara-jo.github.io/teaching-materials/[cara-jo.github.io/teaching-materials/]
+
+== What we will be covering in this workshop
+* Downloading Bootstrap and incorporating it into an HTML document
+* Working with the Bootstrap responsive grid system
+* Exploring Bootstrap’s core CSS, overriding this CSS using standard CSS techniques
+* Incorporating Bootstrap’s image formatting elements and icons
+* Creating and styling fully responsive interactive menus with Bootstrap.
+

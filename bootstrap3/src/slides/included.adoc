@@ -1,0 +1,16 @@
+[role="transition-blue"]
+== What's Included?
+
+== File Structure
+
+image::{image_path}/bootstrap-files.png[]
+
+== Base CSS:
+Styles for common HTML elements, including the grid system, typography, tables, forms, and buttons.
+
+== Components:
+Styles for common user interface elements, like tabs &amp; pills, breadcrumbs, navigation bars, alerts, page headers, and more.
+
+== JavaScript Plugins:
+Similar to components, Bootstrap uses JavaScript plugins for tooltips, popovers, carousels, modal windows, and other elements
+

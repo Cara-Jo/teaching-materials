@@ -1,0 +1,27 @@
+[role="transition-blue"]
+== Why Bootstrap?
+
+== Why?
+Bootstrap is designed to be responsive, which means that your HTML elements will respond to changes in screen size.
+
+== Why?
+So this desktop design:
+
+image::{image_path}/desktop.png[]
+
+== Why?
+Also looks great on a tablet:
+
+image::{image_path}/iPad.png[]
+
+== Why?
+And rad on a smartphone!
+
+image::{image_path}/iPhone.png[]
+
+== Why?
+Bootstrap is also mobile-first, which means that certain mobile-friendly styles (like the ability to zoom in) are included in the core files.
+
+== Why? 
+Bootstrap stylishly fast-tracks your web development. It's an excellent tool to get your project up and running in no time!
+

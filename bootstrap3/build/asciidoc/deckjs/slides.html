@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="Asciidoctor 1.5.2" name="generator" />
+<title>Bootstrap 3</title>
+<link href="deck.js/themes/style/font.css" rel="stylesheet" />
+<style>
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 1.2em; height: 1.2em; font-size: 0.9em; font-weight: bold; line-height: 1.2; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -0.1em; }
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.colist table td:first-of-type { padding-right: 0.25em; }
+</style>
+<style>
+/* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
+/*pre.CodeRay {background-color:#f7f7f8;}*/
+.CodeRay .line-numbers{border-right:1px solid #d8d8d8;padding:0 0.5em 0 .25em}
+.CodeRay span.line-numbers{display:inline-block;margin-right:.5em;color:rgba(0,0,0,.3)}
+.CodeRay .line-numbers strong{font-weight: normal}
+table.CodeRay{border-collapse:separate;border-spacing:0;margin-bottom:0;border:0;background:none}
+table.CodeRay td{vertical-align: top}
+table.CodeRay td.line-numbers{text-align:right}
+table.CodeRay td.line-numbers>pre{padding:0;color:rgba(0,0,0,.3)}
+table.CodeRay td.code{padding:0 0 0 .5em}
+table.CodeRay td.code>pre{padding:0}
+.CodeRay .debug{color:#fff !important;background:#000080 !important}
+.CodeRay .annotation{color:#007}
+.CodeRay .attribute-name{color:#000080}
+.CodeRay .attribute-value{color:#700}
+.CodeRay .binary{color:#509}
+.CodeRay .comment{color:#998;font-style:italic}
+.CodeRay .char{color:#04d}
+.CodeRay .char .content{color:#04d}
+.CodeRay .char .delimiter{color:#039}
+.CodeRay .class{color:#458;font-weight:bold}
+.CodeRay .complex{color:#a08}
+.CodeRay .constant,.CodeRay .predefined-constant{color:#008080}
+.CodeRay .color{color:#099}
+.CodeRay .class-variable{color:#369}
+.CodeRay .decorator{color:#b0b}
+.CodeRay .definition{color:#099}
+.CodeRay .delimiter{color:#000}
+.CodeRay .doc{color:#970}
+.CodeRay .doctype{color:#34b}
+.CodeRay .doc-string{color:#d42}
+.CodeRay .escape{color:#666}
+.CodeRay .entity{color:#800}
+.CodeRay .error{color:#808}
+.CodeRay .exception{color:inherit}
+.CodeRay .filename{color:#099}
+.CodeRay .function{color:#900;font-weight:bold}
+.CodeRay .global-variable{color:#008080}
+.CodeRay .hex{color:#058}
+.CodeRay .integer,.CodeRay .float{color:#099}
+.CodeRay .include{color:#555}
+.CodeRay .inline{color:#00}
+.CodeRay .inline .inline{background:#ccc}
+.CodeRay .inline .inline .inline{background:#bbb}
+.CodeRay .inline .inline-delimiter{color:#d14}
+.CodeRay .inline-delimiter{color:#d14}
+.CodeRay .important{color:#555;font-weight:bold}
+.CodeRay .interpreted{color:#b2b}
+.CodeRay .instance-variable{color:#008080}
+.CodeRay .label{color:#970}
+.CodeRay .local-variable{color:#963}
+.CodeRay .octal{color:#40e}
+.CodeRay .predefined{color:#369}
+.CodeRay .preprocessor{color:#579}
+.CodeRay .pseudo-class{color:#555}
+.CodeRay .directive{font-weight:bold}
+.CodeRay .type{font-weight:bold}
+.CodeRay .predefined-type{color:inherit}
+.CodeRay .reserved,.CodeRay .keyword {color:#000;font-weight:bold}
+.CodeRay .key{color:#808}
+.CodeRay .key .delimiter{color:#606}
+.CodeRay .key .char{color:#80f}
+.CodeRay .value{color:#088}
+.CodeRay .regexp .delimiter{color:#808}
+.CodeRay .regexp .content{color:#808}
+.CodeRay .regexp .modifier{color:#808}
+.CodeRay .regexp .char{color:#d14}
+.CodeRay .regexp .function{color:#404;font-weight:bold}
+.CodeRay .string{color:#d20}
+.CodeRay .string .string .string{background:#ffd0d0}
+.CodeRay .string .content{color:#d14}
+.CodeRay .string .char{color:#d14}
+.CodeRay .string .delimiter{color:#d14}
+.CodeRay .shell{color:#d14}
+.CodeRay .shell .delimiter{color:#d14}
+.CodeRay .symbol{color:#990073}
+.CodeRay .symbol .content{color:#a60}
+.CodeRay .symbol .delimiter{color:#630}
+.CodeRay .tag{color:#008080}
+.CodeRay .tag-special{color:#d70}
+.CodeRay .variable{color:#036}
+.CodeRay .insert{background:#afa}
+.CodeRay .delete{background:#faa}
+.CodeRay .change{color:#aaf;background:#007}
+.CodeRay .head{color:#f8f;background:#505}
+.CodeRay .insert .insert{color:#080}
+.CodeRay .delete .delete{color:#800}
+.CodeRay .change .change{color:#66f}
+.CodeRay .head .head{color:#f4f}
+</style>
+<link href="deck.js/core/deck.core.css" rel="stylesheet" />
+<link href="deck.js/extensions/scale/deck.scale.css" media="screen" rel="stylesheet" />
+<link href="deck.js/extensions/status/deck.status.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/style/cojorado.css" media="screen" rel="stylesheet" />
+<link href="deck.js/themes/transition/fade.css" media="screen" rel="stylesheet" />
+<link href="deck.js/core/print.css" media="print" rel="stylesheet" />
+<script src="deck.js/modernizr.custom.js"></script>
+</head>
+<body class="article">
+<div class="deck-container">
+<div class="deck-header">
+<div class="flex-element deck-course">
+<p>Bootstrap 3</p>
+</div>
+<div class="flex-element deck-brand">
+<a href="http://girldevelopit.com" target="blank">Girl Develop It</a>
+</div>
+</div>
+<section class="slide" id="title-slide">
+<h1>Bootstrap 3</h1>
+</section>
+<section class="slide" id="about-cojo">
+<h2>About Cojo</h2>
+<div class="ulist">
+<ul>
+<li>Designing &amp; Coding for the Internet since 1998</li>
+<li>Senior Designoper at DataStax</li>
+<li>Founder of Girl Develop It Boulder/Denver</li>
+<li><a href="mailto:hi@cojorado.com">hi@cojorado.com</a></li>
+<li>@cojorado</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="slides">
+<h2>Slides</h2>
+<div class="paragraph"><p>View these slides online at: <a href="http://cara-jo.github.io/teaching-materials/">cara-jo.github.io/teaching-materials/</a></p></div>
+</section>
+<section class="slide" id="what-we-will-be-covering-in-this-workshop">
+<h2>What we will be covering in this workshop</h2>
+<div class="ulist">
+<ul>
+<li>Downloading Bootstrap and incorporating it into an HTML document</li>
+<li>Working with the Bootstrap responsive grid system</li>
+<li>Exploring Bootstrap’s core CSS, overriding this CSS using standard CSS techniques</li>
+<li>Incorporating Bootstrap’s image formatting elements and icons</li>
+<li>Creating and styling fully responsive interactive menus with Bootstrap.</li>
+</ul>
+</div>
+</section>
+<section class="slide transition-blue" id="what-is-bootstrap">
+<h2>What is Bootstrap?</h2>
+
+</section>
+<section class="slide" id="what-is-bootstrap-2">
+<h2>What is Bootstrap?</h2>
+<div class="paragraph"><p>Twitter&#8217;s Bootstrap is a frontend UI (user interface) framework that speeds up the development of new websites and web applications.</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="devices" src="images/devices.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="what-is-bootstrap-3">
+<h2>What is Bootstrap?</h2>
+<div class="paragraph"><p>It is the #1 project on github with 65,000+ stars and over 23,000 forks
+Bootstrap is an open source project on GitHub, meaning anyone can contribute to its progress.</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="github" src="images/github.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="what-is-a-framework">
+<h2>What is a Framework?</h2>
+<div class="paragraph"><p>A front-end web development framework is simply a collection of production-ready HTML/CSS/JavaScript components that we can use in our designs.</p></div>
+</section>
+<section class="slide" id="what-is-a-framework-2">
+<h2>What is a Framework?</h2>
+<div class="paragraph"><p>Bear in mind that Bootstrap is not just a CSS grid. It also comes with tons of features that you can use to build a fully-functional website.</p></div>
+</section>
+<section class="slide transition-blue" id="why-bootstrap">
+<h2>Why Bootstrap?</h2>
+
+</section>
+<section class="slide" id="why">
+<h2>Why?</h2>
+<div class="paragraph"><p>Bootstrap is designed to be responsive, which means that your HTML elements will respond to changes in screen size.</p></div>
+</section>
+<section class="slide" id="why-2">
+<h2>Why?</h2>
+<div class="paragraph"><p>So this desktop design:</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="desktop" src="images/desktop.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="why-3">
+<h2>Why?</h2>
+<div class="paragraph"><p>Also looks great on a tablet:</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="iPad" src="images/iPad.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="why-4">
+<h2>Why?</h2>
+<div class="paragraph"><p>And rad on a smartphone!</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="iPhone" src="images/iPhone.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="why-5">
+<h2>Why?</h2>
+<div class="paragraph"><p>Bootstrap is also mobile-first, which means that certain mobile-friendly styles (like the ability to zoom in) are included in the core files.</p></div>
+</section>
+<section class="slide" id="why-6">
+<h2>Why?</h2>
+<div class="paragraph"><p>Bootstrap stylishly fast-tracks your web development. It&#8217;s an excellent tool to get your project up and running in no time!</p></div>
+</section>
+<section class="slide transition-blue" id="what-s-included">
+<h2>What&#8217;s Included?</h2>
+
+</section>
+<section class="slide" id="file-structure">
+<h2>File Structure</h2>
+<div class="imageblock">
+<div class="content">
+<img alt="bootstrap files" src="images/bootstrap-files.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="base-css">
+<h2>Base CSS:</h2>
+<div class="paragraph"><p>Styles for common HTML elements, including the grid system, typography, tables, forms, and buttons.</p></div>
+</section>
+<section class="slide" id="components">
+<h2>Components:</h2>
+<div class="paragraph"><p>Styles for common user interface elements, like tabs &amp; pills, breadcrumbs, navigation bars, alerts, page headers, and more.</p></div>
+</section>
+<section class="slide" id="javascript-plugins">
+<h2>JavaScript Plugins:</h2>
+<div class="paragraph"><p>Similar to components, Bootstrap uses JavaScript plugins for tooltips, popovers, carousels, modal windows, and other elements</p></div>
+</section>
+<section class="slide transition-blue" id="the-bootstrap-grid-system">
+<h2>The Bootstrap Grid System</h2>
+
+</section>
+<section class="slide" id="the-grid">
+<h2>The Grid</h2>
+<div class="imageblock">
+<div class="content">
+<img alt="the grid" src="images/the-grid.jpg" />
+</div>
+</div>
+</section>
+<section class="slide" id="the-grid-2">
+<h2>The Grid</h2>
+<div class="paragraph"><p>Bootstrap is based on a 12-column grid, and uses CSS classes to decide the width of each element.</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="12 grid" src="images/12-grid.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="the-grid-3">
+<h2>The Grid</h2>
+<div class="paragraph"><p>Each element can take up between 1-12 columns worth of space&#8230;&#8203;</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="12 grid overlay" src="images/12-grid-overlay.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="rules-of-the-grid">
+<h2>Rules of The Grid</h2>
+<div class="ulist">
+<ul>
+<li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
+<li>Use rows (<code>.row</code>) to create horizontal groups of columns.</li>
+<li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+</ul>
+</div>
+</section>
+<section class="slide" id="example">
+<h2>Example</h2>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">row</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        [CONTENT FOR ROW]
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="column-classes">
+<h2>Column Classes</h2>
+<div class="imageblock">
+<div class="content">
+<img alt="col classes" src="images/col-classes.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="in-other-words">
+<h2>In other words&#8230;&#8203;</h2>
+<div class="paragraph"><p>If you want to have two 50% columns on a mobile phone, you would use <code>.col-xs-6</code> nested in a <code>.row</code>, and the rows would be consistent on every device&#8230;&#8203;</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="12 grid 2 col" src="images/12-grid-2-col.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="two-50-width-columns">
+<h2>Two 50% width columns</h2>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">row</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">col-xs-6</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+            [COLUMN 1 CONTENT]
+        <span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">col-xs-6</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+            [COLUMN 2 CONTENT]
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph"><p>Two 50% columns on a mobile phone</p></div>
+</section>
+<section class="slide" id="four-25-width-columns">
+<h2>Four 25% width columns</h2>
+<div class="paragraph"><p>If you want to have four 25% columns on a desktop, and would like them to break to 100% on a tablet, you would use .col-md-3 nested in a .row.</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="12 grid 4 col" src="images/12-grid-4-col.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="four-25-width-columns-2">
+<h2>Four 25% width columns</h2>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">row</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">col-md-4</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+            [COLUMN 1 CONTENT]
+        <span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">col-md-4</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+            [COLUMN 2 CONTENT]
+        <span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">col-md-4</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+            [COLUMN 3 CONTENT]
+        <span class="tag">&lt;/div&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">col-md-4</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+            [COLUMN 4 CONTENT]
+        <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph"><p>Four 25% columns on desktop that break to 100% width on a tablet.</p></div>
+</section>
+<section class="slide transition-blue" id="navigation">
+<h2>Navigation</h2>
+<div class="paragraph"><p>Bootstrap has 4 different types of navigation</p></div>
+</section>
+<section class="slide" id="1-default">
+<h2>1. Default</h2>
+<div class="paragraph"><p>Default Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggle-able) in mobile views and become horizontal as the available viewport width increases.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="tag">&lt;nav</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navbar navbar-default</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">role</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navigation</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/nav&gt;</span></code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="2-fixed-to-top">
+<h2>2. Fixed to Top</h2>
+<div class="paragraph"><p>Add <code>.navbar-fixed-top</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="tag">&lt;nav</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navbar navbar-default navbar-fixed-top</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">role</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navigation</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/nav&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph"><p>Body Padding Required:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html">body { padding-top: 70px; }</code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="3-fixed-to-bottom">
+<h2>3. Fixed to Bottom</h2>
+<div class="paragraph"><p>Add <code>.navbar-fixed-bottom</code> and include a <code>.container</code> or <code>.container-fluid</code> to center and pad navbar content.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="tag">&lt;nav</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navbar navbar-default navbar-fixed-bottom</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">role</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navigation</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/nav&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph"><p>Body Padding Required:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html">body { padding-bottom: 70px; }</code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="4-static-top">
+<h2>4. Static Top</h2>
+<div class="paragraph"><p>Full-width navbar that scrolls away with the page.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="tag">&lt;nav</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navbar navbar-default navbar-static-top</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">role</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">navigation</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">container</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    ...
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/nav&gt;</span></code></pre>
+</div>
+</div>
+</section>
+<section class="slide transition-blue" id="image-formatting">
+<h2>Image Formatting</h2>
+
+</section>
+<section class="slide" id="images-in-columns">
+<h2>Images in Columns</h2>
+<div class="paragraph"><p>Images in Bootstrap 3 can be made responsive-friendly via the addition of the <code>.img-responsive</code> class. This applies <code>max-width: 100%;</code> and <code>height: auto;</code> to the image so that it scales nicely to the parent element.</p></div>
+</section>
+<section class="slide" id="images-in-columns-2">
+<h2>Images in Columns</h2>
+<div class="ulist">
+<ul>
+<li><code>.img-rounded</code> applies rounded edges</li>
+<li><code>.img-circle</code> takes a square image and applies the style border-radius: 50%;</li>
+<li><code>.img-thumbnail</code> applies a border with rounded edges to the image</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="tag">&lt;img</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">puppy.jpg</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">img-rounded</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">alt</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Rounded Puppy</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;img</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">puppy.jpg</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">img-circle</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">alt</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Circle Puppy</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;img</span> <span class="attribute-name">src</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">puppy.jpg</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">img-thumbnail</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">alt</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Puppy Thumbnail</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span></code></pre>
+</div>
+</div>
+</section>
+<section class="slide transition-blue" id="buttons">
+<h2>Buttons!</h2>
+
+</section>
+<section class="slide" id="buttons-2">
+<h2>Buttons</h2>
+<div class="paragraph"><p>Bootstrap comes with some amazing button classes for you to use out of the box. We all know that making those perfectly subtle rounded cornered buttons, is a pain.</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="buttons all" src="images/buttons-all.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="buttons-3">
+<h2>Buttons</h2>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="comment">&lt;!-- Standard button --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">btn btn-default</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Default<span class="tag">&lt;/button&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph"><p>The <code>.btn</code> class can be applied to either a
+<code>&lt;button&gt;</code> or a <code>&lt;a&gt;</code></p></div>
+</section>
+<section class="slide" id="but-wait-there-s-more">
+<h2>But wait - there&#8217;s more!</h2>
+<div class="paragraph"><p>Bootstrap has different classes for providing extra visual weight and identifying the primary action in a set of buttons.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="comment">&lt;!-- Primary Action --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">btn btn-primary</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Primary<span class="tag">&lt;/button&gt;</span>
+<span class="comment">&lt;!-- Indicates a successful or positive action --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">btn btn-success</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Success<span class="tag">&lt;/button&gt;</span>
+<span class="comment">&lt;!-- Contextual button for informational alert messages --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">btn btn-info</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Info<span class="tag">&lt;/button&gt;</span>
+<span class="comment">&lt;!-- Indicates caution should be taken with this action --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">btn btn-warning</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Warning<span class="tag">&lt;/button&gt;</span>
+<span class="comment">&lt;!-- Indicates a dangerous or potentially negative action --&gt;</span>
+<span class="tag">&lt;button</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">btn btn-danger</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Danger<span class="tag">&lt;/button&gt;</span></code></pre>
+</div>
+</div>
+</section>
+<section class="slide" id="fancy-some-bigger-or-smaller-buttons">
+<h2>Fancy some bigger or smaller buttons?</h2>
+<div class="paragraph"><p>Sometimes you need a really big button for that call to action.</p></div>
+<div class="imageblock">
+<div class="content">
+<img alt="button sized" src="images/button-sized.png" />
+</div>
+</div>
+</section>
+<section class="slide" id="add-a-size-class-to-buttons">
+<h2>Add a size class to buttons</h2>
+<div class="paragraph"><p>For larger or smaller buttons add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p></div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay"><code class="html language-html"><span class="tag">&lt;button</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">btn btn-primary btn-lg</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+Large button<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">btn btn-primary</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+Default button<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">btn btn-primary btn-sm</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+Small button<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;button</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">button</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">btn btn-primary btn-xs</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+Extra small button<span class="tag">&lt;/button&gt;</span></code></pre>
+</div>
+</div>
+</section>
+<section class="slide transition-blue" id="customize">
+<h2>Customize</h2>
+
+</section>
+<section class="slide" id="customize-your-download">
+<h2>Customize your download</h2>
+<div class="paragraph"><p>If you only want a little bit of Bootstrap, or a lot, you can customize what is included with it.</p></div>
+<div class="paragraph"><p><a href="http://getbootstrap.com/customize">getbootstrap.com/customize</a></p></div>
+</section>
+<section class="slide" id="customize-your-site">
+<h2>Customize your site</h2>
+<div class="paragraph"><p>Want to customize your Bootstrap page even more? Just create your own CSS and include it in the <code>head</code>, below the Bootstrap CSS to add and override styles.</p></div>
+<div class="paragraph"><p>Before you start creating custom CSS for your design, always check the Bootstrap documentation to see if they&#8217;ve already created a class that does what you want.</p></div>
+</section>
+<section class="slide" id="use-a-theme">
+<h2>Use a theme</h2>
+<div class="ulist">
+<ul>
+<li><a href="http://designmodo.github.io/Flat-UI/">FlatUI</a>: Flat UI is a beautiful theme for Bootstrap. They have redesigned many of its components to look flat in every pixel.</li>
+<li><a href="http://startbootstrap.com/">Start Bootstrap</a>: Start Bootstrap is a library of free to download Bootstrap 3 themes and templates.</li>
+<li><a href="http://expo.getbootstrap.com/">Bootstrap Expo</a>: Curated list of beautiful and inspiring sites using Bootstrap</li>
+</ul>
+</div>
+</section>
+<div aria-role="navigation">
+<a class="deck-prev-link" href="#" title="Previous">
+<i class="icon-chevron-with-circle-left"></i>
+</a>
+<a class="deck-next-link" href="#" title="Next">
+<i class="icon-chevron-with-circle-right"></i>
+</a>
+</div>
+<p aria-role="status" class="deck-status">
+<span class="deck-status-current"></span>
+/
+<span class="deck-status-total"></span>
+</p>
+</div>
+<script src="deck.js/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+<script src="deck.js/core/deck.core.js"></script>
+<script src="deck.js/extensions/scale/deck.scale.js"></script>
+<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js/extensions/status/deck.status.js"></script>
+<script src="deck.js/extensions/svg/svg.min.js"></script>
+<footer>
+<div class="deck-progressbar">
+<span></span>
+</div>
+<div class="flex-element deck-notice">
+<p>
+&hearts; COJORADO
+</p>
+</div>
+<div class="flex-element deck-progress">
+<p>Slide
+<span class="deck-status-current"></span>
+of
+<span class="deck-status-total"></span></p>
+</div>
+</footer>
+<script type="text/javascript">
+  //<![CDATA[
+    (function($, deck, undefined) {
+      $.deck.defaults.keys['previous'] = [8, 33, 37, 39];
+      $.deck.defaults.keys['next'] = [13, 32, 34, 39];
+    
+      $.extend(true, $[deck].defaults, {
+          countNested: false
+      });
+    
+      $.deck('.slide');
+      $.deck('disableScale');
+    })(jQuery, 'deck');
+  //]]>
+</script>
+<script type="text/javascript">
+  //<![CDATA[
+    $(document).bind('deck.change', function(event, from, to) {
+      var width = to / ($.deck('getSlides').length - 1) * 100;
+      $('.deck-progressbar span').css('width', width + '%');
+    });
+  //]]>
+</script>
+</body>
+</html>

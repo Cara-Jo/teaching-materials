@@ -1,0 +1,11 @@
+include::{slide_path}/intro.adoc[]
+include::{slide_path}/whatis.adoc[]
+include::{slide_path}/why.adoc[]
+include::{slide_path}/included.adoc[]
+include::{slide_path}/grid.adoc[]
+include::{slide_path}/navigation.adoc[]
+include::{slide_path}/image.adoc[]
+include::{slide_path}/buttons.adoc[]
+include::{slide_path}/customize.adoc[]
+
+
