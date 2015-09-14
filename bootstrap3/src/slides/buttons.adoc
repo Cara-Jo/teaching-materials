@@ -1,0 +1,54 @@
+[role="transition-blue"]
+== Buttons!
+
+== Buttons
+Bootstrap comes with some amazing button classes for you to use out of the box. We all know that making those perfectly subtle rounded cornered buttons, is a pain.
+
+image::{image_path}/buttons-all.png[]
+
+== Buttons
+
+[source, html]
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+The `.btn` class can be applied to either a
+`<button>` or a `<a>`
+
+== But wait - there's more!
+
+Bootstrap has different classes for providing extra visual weight and identifying the primary action in a set of buttons.
+
+[source, html]
+<!-- Primary Action -->
+<button type="button" class="btn btn-primary">Primary</button>
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+== Fancy some bigger or smaller buttons?
+
+Sometimes you need a really big button for that call to action.
+
+image::{image_path}/button-sized.png[]
+
+== Add a size class to buttons
+
+For larger or smaller buttons add `.btn-lg`, `.btn-sm`, or `.btn-xs` for additional sizes.
+
+
+[source, html]
+<button type="button" class="btn btn-primary btn-lg">
+Large button</button>
+<button type="button" class="btn btn-primary">
+Default button</button>
+<button type="button" class="btn btn-primary btn-sm">
+Small button</button>
+<button type="button" class="btn btn-primary btn-xs">
+Extra small button</button>
+

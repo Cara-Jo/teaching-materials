@@ -1,0 +1,61 @@
+[role="transition-blue"]
+== Navigation
+Bootstrap has 4 different types of navigation
+
+== 1. Default
+
+Default Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggle-able) in mobile views and become horizontal as the available viewport width increases.
+
+[source, html]
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    ...
+  </div>
+</nav>
+
+== 2. Fixed to Top
+
+Add `.navbar-fixed-top` and include a `.container` or `.container-fluid` to center and pad navbar content.
+
+[source, html]
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    ...
+  </div>
+</nav>
+
+Body Padding Required:
+
+[source, html]
+body { padding-top: 70px; }
+
+== 3. Fixed to Bottom
+
+Add `.navbar-fixed-bottom` and include a `.container` or `.container-fluid` to center and pad navbar content.
+
+[source, html]
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container">
+    ...
+  </div>
+</nav>
+
+Body Padding Required:
+
+[source, html]
+body { padding-bottom: 70px; }
+
+== 4. Static Top
+
+Full-width navbar that scrolls away with the page.
+
+[source, html]
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    ...
+  </div>
+</nav>
+
+
+ 
+

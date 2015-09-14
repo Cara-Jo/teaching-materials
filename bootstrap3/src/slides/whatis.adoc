@@ -1,0 +1,21 @@
+[role="transition-blue"]
+== What is Bootstrap?
+
+== What is Bootstrap?
+Twitter's Bootstrap is a frontend UI (user interface) framework that speeds up the development of new websites and web applications.
+
+image::{image_path}/devices.png[]
+
+
+== What is Bootstrap?
+It is the #1 project on github with 65,000+ stars and over 23,000 forks
+Bootstrap is an open source project on GitHub, meaning anyone can contribute to its progress.
+
+image::{image_path}/github.png[]
+
+== What is a Framework? 
+A front-end web development framework is simply a collection of production-ready HTML/CSS/JavaScript components that we can use in our designs.
+
+== What is a Framework?
+Bear in mind that Bootstrap is not just a CSS grid. It also comes with tons of features that you can use to build a fully-functional website.
+

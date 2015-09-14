@@ -1,0 +1,17 @@
+plugins {
+  id 'com.datastax.gradle.curriculum.plugin' version '0.1.6'
+}
+
+/*
+buildscript {
+  repositories {
+    mavenLocal()
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.datastax:gradle-curriculum-plugin:0.1.5-SNAPSHOT'
+  }
+}
+*/
+
+apply plugin: 'com.datastax.gradle.curriculum.plugin'
